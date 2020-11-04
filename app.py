@@ -12,13 +12,17 @@ import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=UserWarning)
 
+from model_1 import PredictSalary
 
 app = Flask(__name__)
 
 @app.route('/')
-def index():
+def home():
     return render_template('index.html')
 
+
+def index():
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
